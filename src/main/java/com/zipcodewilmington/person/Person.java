@@ -3,7 +3,7 @@ package com.zipcodewilmington.person;
 /**
  * If you did ObjectsOne lab, you might recognize this code?
  */
-public class Person {
+public class Person { // E
     private String name;
     private int age;
 
