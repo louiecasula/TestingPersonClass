@@ -6,6 +6,7 @@ package com.zipcodewilmington.person;
 public class Person { // E
     private String name;
     private int age;
+    private int distanceMoved;
 
     public Person() {
         this("", Integer.MAX_VALUE);
@@ -39,4 +40,29 @@ public class Person { // E
     public Integer getAge() {
         return age;
     }
+
+    public String sing() {
+        return "La la laaa!";
+    }
+
+    public String fIfIKnow() {
+        return "¯\\_(ツ)_/¯";
+    }
+
+    public int getDistanceMoved() {
+        return distanceMoved;
+    }
+
+    public void walk() {
+        this.distanceMoved += 2;
+    }
+
+    public void run() {
+        this.distanceMoved += 5;
+    }
+
+    public boolean didAMarathon() {
+        return this.distanceMoved > 26;
+    }
+
 }

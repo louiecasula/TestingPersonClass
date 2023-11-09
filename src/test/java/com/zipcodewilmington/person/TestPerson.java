@@ -95,4 +95,67 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testWalk() {
+        // Given
+        Person person = new Person();
+        Integer expected = 2;
+
+        // When
+        person.walk();
+
+        // Then
+        Integer actual = person.getDistanceMoved();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetDistanceMoved() {
+        // Given
+        Person person = new Person();
+        Integer expected = 7;
+
+        // When
+        person.walk();
+        person.run();
+
+        // Then
+        Integer actual = person.getDistanceMoved();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDidAMarathon() {
+        // Given
+        Person person = new Person();
+        boolean expected = true;
+
+        // When
+        person.run();
+        person.run();
+        person.run();
+        person.run();
+        person.run();
+        person.walk();
+
+
+        // Then
+        boolean actual = person.didAMarathon();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFIfIKnow() {
+        // Given
+        Person person = new Person();
+        String expected = "¯\\_(ツ)_/¯";
+
+        // When
+        person.fIfIKnow();
+
+        // Then
+        String actual = person.fIfIKnow();
+        Assert.assertEquals(expected, actual);
+    }
 }
